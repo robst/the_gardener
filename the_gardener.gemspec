@@ -6,16 +6,18 @@ require 'the_gardener/version'
 Gem::Specification.new do |spec|
   spec.name          = "the_gardener"
   spec.version       = TheGardener::VERSION
-  spec.authors       = ["robst"]
+  spec.authors       = ["Robert Starke"]
   spec.email         = ["robertst81@gmail.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary     = "Gardener, take's care about your seeds!"
+  spec.description = "A Gem for versioned seed files. Create seed files and use
+                      it like the active record migrations. it has an generator 
+                      for seeds, and a task to load all seeds. look at the 
+                      github page for more information."
+
+
+  spec.homepage      = "https://github.com/robst/the_gardener"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -25,4 +27,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency 'rails', '>= 3.2.0'
+  
 end
