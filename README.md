@@ -1,38 +1,85 @@
 # TheGardener
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/the_gardener`. To experiment with that code, run `bin/console` for an interactive prompt.
+TheGardener helps you to versionize your seed files. If you need to separate 
+seedings, this gem could be helpfull for you.
 
-TODO: Delete this and the text above, and describe your gem
+TheGardener generates seed files filed under `db/seeds` and stores which seed 
+allready be done. it's the same procedure like migrations.
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
+hm, yeah. just add this to your Gemfile:
 
 ```ruby
 gem 'the_gardener'
 ```
 
 And then execute:
-
-    $ bundle
-
+```
+  $ bundle
+```
 Or install it yourself as:
+```
+  $ gem install the_gardener
+```
 
-    $ gem install the_gardener
+Now you just have to install the_gardener in your project:
+```
+rails g the_gardener:install
+```
+
+and run your migrations.
 
 ## Usage
 
-TODO: Write usage instructions here
+Ok, to create a seed file just run:
 
-## Development
+```
+rails g seed your_filename_for_your_seed
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+After this, you can put your code to the seedfile (filed under db/seeds). 
+Just put some `Model.create` stuff there.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+to run all your seed files just
+
+```
+rake tg:seed
+```
+
+If there is some seed which throws an error, the task stopped and all seeds in 
+this seedfile will be canceled
+
+## The MIT License (MIT)
+
+Copyright (c) 2015  [Robert Starke](robertst81+github@gmail.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+## Questions?
+
+If you have further questions, code smells, hints or a beer, just contact me :)
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/the_gardener/fork )
+1. Fork it ( https://github.com/robst/the_gardener/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
