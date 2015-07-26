@@ -12,7 +12,7 @@ allready be done. it's the same procedure like migrations.
 hm, yeah. just add this to your Gemfile:
 
 ```ruby
-gem 'the_gardener'
+gem 'the_gardener', '~> 0.1.0'
 ```
 
 And then execute:
@@ -26,7 +26,7 @@ Or install it yourself as:
 
 Now you just have to install the_gardener in your project:
 ```
-rails g the_gardener:install
+  $ rails g the_gardener:install
 ```
 
 and run your migrations.
@@ -36,7 +36,7 @@ and run your migrations.
 Ok, to create a seed file just run:
 
 ```
-rails g seed your_filename_for_your_seed
+  $ rails g seed your_filename_for_your_seed
 ```
 
 After this, you can put your code to the seedfile (filed under db/seeds). 
@@ -45,7 +45,7 @@ Just put some `Model.create` stuff there.
 to run all your seed files just
 
 ```
-rake tg:seed
+  $ rake tg:seed
 ```
 
 If there is some seed which throws an error, the task stopped and all seeds in 
