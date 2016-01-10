@@ -36,11 +36,11 @@ and run your migrations.
 Ok, to create a seed file just run:
 
 ```
-  $ rails g seed your_filename_for_your_seed
+  $ rails g seed create_new_entries
 ```
 
-After this, you can put your code to the seedfile (filed under db/seeds). 
-Just put some `Model.create` stuff there.
+This will create a seedfile like 20150924085237_create_new_entries (filed under db/seeds). 
+Just put some `Model.create` Or other stuff there.
 
 to run all your seed files just
 
