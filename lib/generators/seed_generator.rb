@@ -5,7 +5,7 @@ class SeedGenerator < Rails::Generators::NamedBase
         your given name"
   def create_seed_file
     create_file filename
-    puts "\tnow you can put your seeds into #{filename}"
+    puts "\tadd your data entries to your seedfile #{filename}"
   end
 
   def filename
