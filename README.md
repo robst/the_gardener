@@ -1,10 +1,10 @@
 # TheGardener
 
 TheGardener helps you to versionize your seed files. If you need to separate 
-seedings, this gem could be helpfull for you.
+seedings from migrations, this gem could be helpfull for you.
 
-TheGardener generates seed files filed under `db/seeds` and stores which seed 
-allready be done. it's the same procedure like migrations.
+TheGardener generates simple seed files filed under `db/seeds` and stores which 
+seed allready be executed. it's the same procedure like migrations.
 
 
 ## Installation
@@ -12,7 +12,7 @@ allready be done. it's the same procedure like migrations.
 hm, yeah. just add this to your Gemfile:
 
 ```ruby
-gem 'the_gardener', '~> 0.1.0'
+gem 'the_gardener', '~> 0.2.0'
 ```
 
 And then execute:
@@ -31,6 +31,10 @@ Now you just have to install the_gardener in your project:
 
 and run your migrations.
 
+```
+  $ rake db:migrate
+```
+
 ## Usage
 
 Ok, to create a seed file just run:
@@ -40,7 +44,7 @@ Ok, to create a seed file just run:
 ```
 
 This will create a seedfile like 20150924085237_create_new_entries (filed under db/seeds). 
-Just put some `Model.create` Or other stuff there.
+Just put some `Model.create` Or other data manipulation stuff there.
 
 to run all your seed files just
 
@@ -49,7 +53,7 @@ to run all your seed files just
 ```
 
 If there is some seed which throws an error, the task stopped and all seeds in 
-this seedfile will be canceled
+this seedfile will be canceled. So fix your seed and run it again.
 
 ## The MIT License (MIT)
 
