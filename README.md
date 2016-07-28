@@ -1,9 +1,9 @@
 # TheGardener
 
-TheGardener helps you to versionize your seed files. If you need to separate 
+TheGardener helps you to versionize your seed files. If you need to separate
 seedings from migrations, this gem could be helpfull for you.
 
-TheGardener generates simple seed files filed under `db/seeds` and stores which 
+TheGardener generates simple seed files filed under `db/seeds` and stores which
 seed allready be executed. it's the same procedure like migrations.
 
 
@@ -18,10 +18,6 @@ gem 'the_gardener', '~> 0.2.0'
 And then execute:
 ```
   $ bundle
-```
-Or install it yourself as:
-```
-  $ gem install the_gardener
 ```
 
 Now you just have to install the_gardener in your project:
@@ -43,8 +39,8 @@ Ok, to create a seed file just run:
   $ rails g seed create_new_entries
 ```
 
-This will create a seedfile like 20150924085237_create_new_entries (filed under db/seeds). 
-Just put some `Model.create` Or other data manipulation stuff there.
+This will create a seedfile like `20160728211737_create_new_entries` (filed under db/seeds).
+Just put some `Model.create` or other data manipulation stuff there.
 
 to run all your seed files just
 
@@ -52,7 +48,7 @@ to run all your seed files just
   $ rake tg:seed
 ```
 
-If there is some seed which throws an error, the task stopped and all seeds in 
+If there is some seed which throws an error, the task stopped and all seeds in
 this seedfile will be canceled. So fix your seed and run it again.
 
 ## The MIT License (MIT)

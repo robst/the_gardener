@@ -12,8 +12,8 @@ Gem::Specification.new do |spec|
 
   spec.summary     = "Gardener, take's care about your seeds!"
   spec.description = "A Gem for versioned seed files. Create seed files and use
-                      it like the active record migrations. it has an generator 
-                      for seeds, and a task to load all seeds. look at the 
+                      it like the active record migrations. it has an generator
+                      for seeds, and a task to load all seeds. look at the
                       github page for more information."
 
 
@@ -29,4 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency 'rails', '>= 4.0.0'
   spec.required_ruby_version = '>= 2.0.0'
+
+  spec.add_dependency("rails", ">= 4.0.0")
 end
